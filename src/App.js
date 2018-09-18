@@ -30,3 +30,8 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps, { addItem })(App);
 /* ES6 shorthand lets us pass in *one* value that will be read as the key and value */
+
+
+// export default connect(state => ({ items: state.items }))(App);
+// ...we would still have this.props.dispatch() available to us in App.
+// If you would rather write this.props.dispatch({ type: 'INCREASE_COUNT' }) in App, or pass dispatch down to children, you can!
